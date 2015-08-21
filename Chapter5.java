@@ -29,4 +29,12 @@ public class Chapter5 {
                       "The average is %f\n",
                       positives, negatives, total, total / (positives + negatives));
   }
+  
+  public static void problem3() {
+    System.out.println("Kilograms    Pounds");
+    
+    for (int kilograms = 1; kilograms < 200; kilograms += 2) {
+      System.out.printf("%-3d           %5.1f\n", kilograms, kilograms * 2.2);
+    }
+  }
 }

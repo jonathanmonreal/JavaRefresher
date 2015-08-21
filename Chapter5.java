@@ -48,4 +48,18 @@ public class Chapter5 {
       pounds += 5;
     }
   }
+  
+  public static void problem10() {
+    int total = 0;
+    
+    for (int number = 120; number < 991; number += 6) {
+      if (number % 5 == 0 && number % 6 == 0) {
+        System.out.print(number + " ");
+        total++;
+        
+        if (total % 10 == 0)
+          System.out.print("\n");
+      }
+    }
+  }
 }

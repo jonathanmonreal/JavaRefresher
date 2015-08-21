@@ -37,4 +37,15 @@ public class Chapter5 {
       System.out.printf("%-3d           %5.1f\n", kilograms, kilograms * 2.2);
     }
   }
+  
+  public static void problem5() {
+    System.out.println("Kilograms    Pounds    |    Pounds    Kilograms");
+    int kilograms = 1, pounds = 20;
+    while (kilograms < 200) {
+      System.out.printf("%-3d           %5.1f    |", kilograms, kilograms * 2.2);
+      System.out.printf("    %-3d           %5.2f\n", pounds, pounds / 2.2);
+      kilograms += 2;
+      pounds += 5;
+    }
+  }
 }

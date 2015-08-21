@@ -40,9 +40,9 @@ public class Chapter3 {
     }
     
     if (currentHour < 12)
-      System.out.printf("The current time is %d:%s:%s AM", currentHour, timeFormat(currentMinute), timeFormat(currentSecond));
+      System.out.printf("The current time is %d:%s:%s AM\n", currentHour, timeFormat(currentMinute), timeFormat(currentSecond));
     else
-      System.out.printf("The current time is %d:%s:%s PM", currentHour - 12, timeFormat(currentMinute), timeFormat(currentSecond));
+      System.out.printf("The current time is %d:%s:%s PM\n", currentHour - 12, timeFormat(currentMinute), timeFormat(currentSecond));
   }
   
   public static String timeFormat(long number) {

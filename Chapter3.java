@@ -19,4 +19,36 @@ public class Chapter3 {
       System.out.println("The equation has no real roots");
     }
   }
+  
+  public static void problem30() {
+    Scanner in = new Scanner(System.in);
+    long totalMilliseconds = System.currentTimeMillis();
+    long totalSeconds = totalMilliseconds / 1000;
+    long currentSecond = totalSeconds % 60;
+    long totalMinutes = totalSeconds / 60;
+    long currentMinute = totalMinutes % 60;
+    long totalHours = totalMinutes / 60;
+    long currentHour = totalHours % 24;
+    
+    System.out.print("Enter the time zone offset to GMT: ");
+    byte offset = in.nextByte();
+    
+    if (currentHour - offset < 0) {
+      currentHour = 24 + offset + currentHour;
+    } else {
+      currentHour += offset;
+    }
+    
+    if (currentHour < 12)
+      System.out.printf("The current time is %d:%s:%s AM", currentHour, timeFormat(currentMinute), timeFormat(currentSecond));
+    else
+      System.out.printf("The current time is %d:%s:%s PM", currentHour - 12, timeFormat(currentMinute), timeFormat(currentSecond));
+  }
+  
+  public static String timeFormat(long number) {
+    if (number > 10)
+      return Long.toString(number);
+    else
+      return "0" + Long.toString(number);
+  }
 }

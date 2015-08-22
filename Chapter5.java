@@ -62,4 +62,13 @@ public class Chapter5 {
       }
     }
   }
+  
+  public static void problem12() {
+    int n = 1;
+    
+    while (n * n < 12000)
+      n++;
+    
+    System.out.println(n - 1);
+  }
 }

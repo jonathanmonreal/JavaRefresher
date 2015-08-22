@@ -71,4 +71,18 @@ public class Chapter5 {
     
     System.out.println(n - 1);
   }
+  
+  public static void problem23() {
+    double leftToRight = 0;
+    double rightToLeft = 0;
+    
+    for (int i = 1; i <= 50000; i++)
+      leftToRight += 1.0 / i;
+    
+    for (int i = 50000; i > 0; i--)
+      rightToLeft += 1.0 / i;
+    
+    System.out.println("Left to right: " + leftToRight);
+    System.out.println("Right to left: " + rightToLeft);
+  }
 }
